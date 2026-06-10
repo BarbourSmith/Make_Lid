@@ -12,6 +12,10 @@
     {
       "name": "Lip_Thickness",
       "ioValue": 1
+    },
+    {
+      "name": "Fused_Geometry",
+      "ioValue": "__GEOMETRY_INPUT__"
     }
   ],
   "topLevel": true,
@@ -2080,9 +2084,10 @@
     },
     {
       "atomType": "Tag",
-      "x": 0.83994708994709,
-      "y": 0.41782729805013924,
+      "x": 0.8313492063492063,
+      "y": 0.2924791086350975,
       "uniqueID": "id-176011",
+      "name": "Top",
       "ioValues": [
         {
           "name": "geometry",
@@ -2090,7 +2095,7 @@
         }
       ],
       "tags": [
-        ""
+        "Top"
       ]
     },
     {
@@ -2101,33 +2106,38 @@
       "ioValues": [
         {
           "name": "Shape 1",
-          "ioValue": {
-            "geometry": "intersect-move-extrude-rectangle-100-100-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-50-0-0--25-extrude-rectangle-1000-1000-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-1000",
-            "tags": [],
-            "color": "#aad7f2",
-            "plane": {
-              "origin": [
-                0,
-                0,
-                0
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "bom": [],
-            "dimension": "3D"
-          }
+          "ioValue": 10
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
         }
       ],
       "unionType": "Fusion"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.9285714285714286,
+      "y": 0.6629526462395543,
+      "uniqueID": "id-176019",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.467966573816156,
+      "uniqueID": "id-176024",
+      "name": "Fused_Geometry",
+      "type": "geometry"
     }
   ],
   "allConnectors": [
@@ -2142,26 +2152,10 @@
       "ap2ID": "id-175399"
     },
     {
-      "ap2Name": "Input",
-      "ap1ID": "id-175399",
-      "ap2ID": "id-175478"
-    },
-    {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-175399",
-      "ap2ID": "id-175720"
-    },
-    {
-      "ap2Name": "retain",
-      "ap1ID": "id-175399",
-      "ap2ID": "id-176004"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-175693",
       "ap2ID": "id-175708"
     },
-    null,
     {
       "ap2Name": "L",
       "ap1ID": "id-175697",
@@ -2178,14 +2172,14 @@
       "ap2ID": "id-175681"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-175708",
-      "ap2ID": "id-175389"
-    },
-    {
       "ap2Name": "remove",
       "ap1ID": "id-175708",
       "ap2ID": "id-175960"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-175708",
+      "ap2ID": "id-176014"
     },
     {
       "ap2Name": "geometry",
@@ -2238,9 +2232,39 @@
       "ap2ID": "id-175960"
     },
     {
-      "ap2Name": "geometry",
+      "ap2Name": "Shape 2",
       "ap1ID": "id-176008",
+      "ap2ID": "id-176019"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-176011",
+      "ap2ID": "id-176019"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-176014",
       "ap2ID": "id-176011"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-176019",
+      "ap2ID": "id-175389"
+    },
+    {
+      "ap2Name": "Input",
+      "ap1ID": "id-176024",
+      "ap2ID": "id-175478"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-176024",
+      "ap2ID": "id-175720"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-176024",
+      "ap2ID": "id-176004"
     }
   ],
   "unitsKey": "Unitless",

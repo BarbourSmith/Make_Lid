@@ -8,6 +8,7 @@
 
 - **Lip_Height** (number)
 - **Lip_Thickness** (number)
+- **Fused_Geometry** (geometry)
 
 
 
